@@ -3,6 +3,12 @@
 #include <cstdint>
 #include <string>
 
+
+struct TraUma {
+	static const std::int8_t Size = 16;
+	std::int8_t Surface[Size][Size] = {};
+};
+
 struct Section {
 	struct BYTE{
 		union {
@@ -27,6 +33,7 @@ struct Section {
 	std::string Name="No Name";
 	std::string Text = "The Text!";
 	std::vector<BYTE> Data;
+	std::vector<TraUma> Grafity;
 };
 
 struct Document {
@@ -51,18 +58,8 @@ int main() {
 	Books A;
 
 
-	A.Books.front().Docs.front().Secs.front().Name
-
-}
+	A.Books.front().Docs.front().Secs.front().Name;
 
 
-
-
-
-
-
-
-
-
-
+	return 0;
 }
